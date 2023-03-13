@@ -40,8 +40,7 @@ Um die Testsuite auf Ihrem Rechner nutzen zu können müssen Sie dieses Git Repo
 
 [source,shell script]
 ----
- # NOT SUPPORTED AS OF NOW!
- git clone https://github.com/gematik/tiger-eau-proxy.git
+ git clone https://github.com/gematik/app-tiger-integration-eau.git
 ----
 
 == Konfiguration der Validierungstestsuite
