@@ -1,0 +1,59 @@
+@startuml
+(*) -->  Installation von OpenJDK 11\n\
+und Apache Maven am Testrechner
+
+--> Clonen des Git repos\nmit der Validierungstestsuite\n\
+https://github.com/gematik/tiger-eau-proxy.git\n\
+in ein Verzeichnis am Testrechner
+
+--> Starte Tiger Validierungstestsuite mit\nmvn clean verify
+
+--> Tiger proxy mit entsprechenden Routen oder reverse Proxies werden gestartet
+
+--> Das validation.feature wird als Testlauf gestartet\n\
+und wartet auf die ersten Nachrichten\n\
+vom Primärsystem
+
+    note left:\
+    Die Feature Datei wird von der Gematik vorgegeben.\n\
+    Das Projekt wird als Github Projekt\n\
+    in einem öffentlichen Repo veröffentlicht
+
+--> ===B1===
+
+    --> Das Primärsystem nutzt den Tiger proxy als Reverse Proxy\num Backendkomponenten/Konnektoren anzusprechen
+
+    --> Das Primärsystem durchläuft\n(automatisch oder manuell)\nden vorgegebenen Testworkflow
+
+    --> Der Testdurchlauf am PS wurde abgeschlossen
+
+--> ===B2===
+
+===B1=== --> Die Validierungstestsuite überprüft\n\
+die Nachrichten sequentiell,\n\
+dem vorgeschriebenen Workflow folgendend\n\
+auf gültige Inhalte und Reihenfolge.
+
+    note left: TBD: Dies inkludiert auch die FHIR Validierungen
+
+If "Alle Testschritte waren erfolgreich?" then
+
+    --> ===B2===
+
+    --> mvn serenity:reports serenity:aggregate\nwerden implizit ausgeführt
+
+    --> mvn gematik:pack-reports\nwird implizit ausgeführt\n\
+    Erstellt eine ZIP Datei mit allen,\n\
+    für das Bestätigungsverfahren notwendigen\n\
+    Testergebnisse und Artefakte
+
+    --> Die ZIP Datei wird in der Titusplatform hochgeladen
+
+    --> Das Bestätigungsverfahren kann\npositiv abgeschlossen werden
+
+    --> (*)
+else
+    --> Der Primärsystemhersteller hat einen\nlokalen Serenity Fehlerbericht vorliegen
+    --> (*)
+Endif
+@enduml

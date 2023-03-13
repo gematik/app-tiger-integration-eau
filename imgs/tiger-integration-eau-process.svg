@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="947.8px" preserveAspectRatio="none" style="width:585px;height:947px;background:#FFFFF0;" version="1.1" viewBox="0 0 585 947" width="585.2px" zoomAndPan="magnify"><defs><filter height="300%" id="fsbz0ds0phr64" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.3999999999999997"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="2.7999999999999994" dy="2.7999999999999994" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" height="38.4453" rx="7" ry="7" style="stroke:#808080;stroke-width:0.6999999999999998;" width="539" x="21" y="21"/><text fill="#333333" font-family="sans-serif" font-size="21" font-weight="bold" lengthAdjust="spacing" textLength="399" x="91" y="47.4927">Tiger EAU Konnektorfarm process</text><ellipse cx="408.625" cy="71.3453" fill="#808080" filter="url(#fsbz0ds0phr64)" rx="7" ry="7" style="stroke:none;stroke-width:0.6999999999999998;"/><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="23.7781" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="173.6" x="321.825" y="106.3453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="159.6" x="328.825" y="121.1424">Installation of openJDK11 and maven.</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="33.5562" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="298.9" x="259.175" y="158.1453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="284.9" x="266.175" y="172.9424">Cloning github repo https://github.com/gematik/tiger-eau-proxy.git</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="169.4" x="323.925" y="182.7205">into a folder on the customers machine.</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="33.5562" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="151.9" x="332.675" y="219.7453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="137.9" x="339.675" y="234.5424">starting Tiger validation suite via</text><text fill="#333333" font-family="sans-serif" font-size="8.4" font-weight="bold" lengthAdjust="spacing" textLength="56.7" x="378.875" y="244.3205">mvn -P Test</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="33.5562" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="255.5" x="280.875" y="281.3453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="175.7" x="320.775" y="296.1424">Tiger test environment manager starts all</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="241.5" x="287.875" y="305.9205">Tiger proxies (reverse, aggregating, local) will be started.</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="43.3344" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="173.6" x="321.825" y="342.9453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="106.4" x="355.425" y="357.7424">The validation feature file</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="159.6" x="328.825" y="367.5205">part of the github repo will be started</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="118.3" x="355.075" y="377.2986">waiting for the first request.</text><rect fill="#808080" filter="url(#fsbz0ds0phr64)" height="5.6" style="stroke:none;stroke-width:0.6999999999999998;" width="56" x="331.625" y="414.3453"/><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="62.8906" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="240.8" x="27.825" y="447.9453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="226.8" x="34.825" y="462.7424">The Primärsystem sends requests to the Konnektoren</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="143.5" x="87.675" y="472.5205">via the local reverse Tiger proxies.</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="190.4" x="64.225" y="482.2986">It follows either manually by human tester or</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="140" x="89.425" y="492.0768">via test scripts the test work flow</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="102.9" x="107.975" y="501.8549">as specified by Gematik.</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="23.7781" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="226.8" x="69.825" y="600.5453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="212.8" x="76.825" y="615.3424">The test work flow has been completed or aborted</text><rect fill="#808080" filter="url(#fsbz0ds0phr64)" height="5.6" style="stroke:none;stroke-width:0.6999999999999998;" width="56" x="209.825" y="661.4453"/><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="62.8906" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="154" x="282.625" y="447.9453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="133" x="293.125" y="462.7424">The validation test suite checks</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="135.1" x="292.075" y="472.5205">that all requests and responses,</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="140" x="289.625" y="482.2986">matching the specified work flow</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="118.3" x="300.475" y="492.0768">have been received in order</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="106.4" x="306.425" y="501.8549">and do match all criteria.</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="33.5562" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="210.7" x="225.575" y="538.9453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" font-weight="bold" lengthAdjust="spacing" textLength="196.7" x="232.575" y="553.7424">mvn serenity:aggregate serenity:reports</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="103.6" x="279.125" y="563.5205">create a local test report</text><polygon fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" points="330.925,604.0453,339.325,612.4453,330.925,620.8453,322.525,612.4453,330.925,604.0453" style="stroke:#808080;stroke-width:1.0499999999999998;"/><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="53.1125" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="214.9" x="130.375" y="704.1453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" font-weight="bold" lengthAdjust="spacing" textLength="127.4" x="174.125" y="718.9424">mvn gematik:pack-reports</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="135.8" x="171.325" y="728.7205">creates a ZIP archive containing</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="178.5" x="154.175" y="738.4986">all relevant data the TITUS platform needs</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="189.7" x="148.575" y="748.2768">for the next steps in the certification process</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="33.5562" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="171.5" x="152.075" y="785.3453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="157.5" x="159.075" y="800.1424">The ZIP archive is uploaded manually</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="91" x="192.325" y="809.9205">to the TITUS platform</text><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="33.5562" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="172.2" x="151.725" y="846.9453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="85.4" x="195.125" y="861.7424">The next step in the</text><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="158.2" x="158.725" y="871.5205">certification process can be triggered</text><ellipse cx="237.825" cy="915.5453" filter="url(#fsbz0ds0phr64)" rx="7" ry="7" style="stroke:#808080;stroke-width:0.6999999999999998;fill:none;"/><ellipse cx="238.175" cy="915.8953" fill="#808080" rx="4.2" ry="4.2" style="stroke:none;stroke-width:0.6999999999999998;"/><rect fill="#FFFFF0" filter="url(#fsbz0ds0phr64)" height="23.7781" rx="8.75" ry="8.75" style="stroke:#808080;stroke-width:1.0499999999999998;" width="221.9" x="313.775" y="652.3453"/><text fill="#333333" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="207.9" x="320.775" y="667.1424">The local test report contains detailed failure logs</text><!--MD5=[81b410e9f21f6ce5e547ee65ba14f468]
+link start to Installation of openJDK11 and maven.--><path d="M408.625,78.3733 C408.625,84.5963 408.625,94.3333 408.625,102.5443 " fill="none" id="start-to-Installation of openJDK11 and maven." style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="408.625,106.1913,411.425,99.8913,408.625,102.6913,405.825,99.8913,408.625,106.1913" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[06289366bb6cd5161a8f43b9ebf719c8]
+link Installation of openJDK11 and maven. to Cloning github repo https://github.com/gematik/tiger-eau-proxy.git\ninto a folder on the customers machine.--><path d="M408.625,130.4043 C408.625,137.3203 408.625,146.3153 408.625,154.3583 " fill="none" id="Installation of openJDK11 and maven.-to-Cloning github repo https://github.com/gematik/tiger-eau-proxy.git\ninto a folder on the customers machine." style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="408.625,157.9773,411.425,151.6773,408.625,154.4773,405.825,151.6773,408.625,157.9773" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[8dcc838b97ecc1d3cdf875452262ea2f]
+link Cloning github repo https://github.com/gematik/tiger-eau-proxy.git\ninto a folder on the customers machine. to starting Tiger validation suite via\n**mvn -P Test **--><path d="M408.625,191.7803 C408.625,199.2703 408.625,208.2443 408.625,216.1263 " fill="none" id="Cloning github repo https://github.com/gematik/tiger-eau-proxy.git\ninto a folder on the customers machine.-to-starting Tiger validation suite via\n**mvn -P Test **" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="408.625,219.6683,411.425,213.3683,408.625,216.1683,405.825,213.3683,408.625,219.6683" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[de8e4accf59d42a6edaa8f287e0b9dbb]
+link starting Tiger validation suite via\n**mvn -P Test ** to Tiger test environment manager starts all\nTiger proxies (reverse, aggregating, local) will be started.--><path d="M408.625,253.3803 C408.625,260.8703 408.625,269.8443 408.625,277.7263 " fill="none" id="starting Tiger validation suite via\n**mvn -P Test **-to-Tiger test environment manager starts all\nTiger proxies (reverse, aggregating, local) will be started." style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="408.625,281.2683,411.425,274.9683,408.625,277.7683,405.825,274.9683,408.625,281.2683" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[33fdafc252e314071f7035fd83fce0aa]
+link Tiger test environment manager starts all\nTiger proxies (reverse, aggregating, local) will be started. to START--><path d="M408.625,315.2743 C408.625,322.5263 408.625,331.2063 408.625,339.2143 " fill="none" id="Tiger test environment manager starts all\nTiger proxies (reverse, aggregating, local) will be started.-to-START" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="408.625,342.8403,411.425,336.5403,408.625,339.3403,405.825,336.5403,408.625,342.8403" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[45025df9162d81ce7da198793af8e673]
+link START to B1--><path d="M388.409,386.4223 C379.512,395.7043 369.838,405.7913 364.28,411.5943 " fill="none" id="START-to-B1" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="361.641,414.3453,368.0243,411.7407,364.0653,411.8209,363.9851,407.8619,361.641,414.3453" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[2ac2780abdaf7dd55d5eec1ed5b344a9]
+link B1 to The Primärsystem sends requests to the Konnektoren\n        via the local reverse Tiger proxies.\n        It follows either manually by human tester or\n        via test scripts the test work flow\n        as specified by Gematik.--><path d="M352.1,420.0153 C336.322,424.5583 297.976,435.6043 258.741,446.9093 " fill="none" id="B1-to-The Primärsystem sends requests to the Konnektoren\n        via the local reverse Tiger proxies.\n        It follows either manually by human tester or\n        via test scripts the test work flow\n        as specified by Gematik." style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="255.185,447.9313,262.0144,448.8741,258.5477,446.9605,260.4612,443.4938,255.185,447.9313" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[790702f87bc20e72d317dc55101771c8]
+link The Primärsystem sends requests to the Konnektoren\n        via the local reverse Tiger proxies.\n        It follows either manually by human tester or\n        via test scripts the test work flow\n        as specified by Gematik. to The test work flow has been completed or aborted--><path d="M156.429,511.0013 C163.611,538.0003 173.733,576.0663 179.256,596.8213 " fill="none" id="The Primärsystem sends requests to the Konnektoren\n        via the local reverse Tiger proxies.\n        It follows either manually by human tester or\n        via test scripts the test work flow\n        as specified by Gematik.-to-The test work flow has been completed or aborted" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="180.166,600.2443,181.2557,593.4368,179.2679,596.8615,175.8432,594.8737,180.166,600.2443" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[c3361521ac8eef1f5f43735c3c70527c]
+link The test work flow has been completed or aborted to B2--><path d="M195.615,624.5833 C207.382,635.4473 224.483,651.2323 232.848,658.9533 " fill="none" id="The test work flow has been completed or aborted-to-B2" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="235.508,661.4033,232.7626,655.0793,232.9305,659.0356,228.9742,659.2034,235.508,661.4033" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[d40636ba22a2ce357f75c2c16164ae35]
+link B1 to The validation test suite checks\nthat all requests and responses,\nmatching the specified work flow\nhave been received in order\nand do match all criteria.--><path d="M359.625,420.1553 C359.625,424.3763 359.625,433.8193 359.625,443.9203 " fill="none" id="B1-to-The validation test suite checks\nthat all requests and responses,\nmatching the specified work flow\nhave been received in order\nand do match all criteria." style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="359.625,447.6653,362.425,441.3653,359.625,444.1653,356.825,441.3653,359.625,447.6653" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[1f5b90726460e54fbd300dddfe7ee18a]
+link The validation test suite checks\nthat all requests and responses,\nmatching the specified work flow\nhave been received in order\nand do match all criteria. to **mvn serenity:aggregate serenity:reports**\ncreate a local test report--><path d="M347.788,511.0433 C344.624,519.2893 341.299,527.9763 338.443,535.4313 " fill="none" id="The validation test suite checks\nthat all requests and responses,\nmatching the specified work flow\nhave been received in order\nand do match all criteria.-to-**mvn serenity:aggregate serenity:reports**\ncreate a local test report" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="337.162,538.7633,342.0269,533.8784,338.4117,535.494,336.7961,531.8788,337.162,538.7633" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[12a5d559cf6ea2acafa8087710c3c909]
+link **mvn serenity:aggregate serenity:reports**\ncreate a local test report to #241071--><path d="M330.925,572.7413 C330.925,581.6103 330.925,592.3693 330.925,600.3353 " fill="none" id="**mvn serenity:aggregate serenity:reports**\ncreate a local test report-to-#241071" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="330.925,604.0033,333.725,597.7033,330.925,600.5033,328.125,597.7033,330.925,604.0033" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><text fill="#008000" font-family="sans-serif" font-size="7.7" lengthAdjust="spacing" textLength="80.5" x="344.7609" y="598.5018">all steps successful?</text><!--MD5=[c503125717970ce3c9ab1f7909d4a0fc]
+link #241071 to B2--><path d="M325.92,615.8543 C310.408,624.2543 263.116,649.8533 244.993,659.6673 " fill="none" id="#241071-to-B2" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="241.78,661.4033,248.6529,660.8619,244.8568,659.735,245.9837,655.939,241.78,661.4033" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[eae3d95846c677002452ee6a16273509]
+link B2 to **mvn gematik:pack-reports**\n creates a ZIP archive containing\n    all relevant data the TITUS platform needs\n    for the next steps in the certification process--><path d="M237.825,667.1083 C237.825,672.3933 237.825,686.5053 237.825,700.0293 " fill="none" id="B2-to-**mvn gematik:pack-reports**\n creates a ZIP archive containing\n    all relevant data the TITUS platform needs\n    for the next steps in the certification process" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="237.825,703.8163,240.625,697.5163,237.825,700.3163,235.025,697.5163,237.825,703.8163" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[bca44e169ef79a3f831872e803fe6442]
+link **mvn gematik:pack-reports**\n creates a ZIP archive containing\n    all relevant data the TITUS platform needs\n    for the next steps in the certification process to The ZIP archive is uploaded manually\nto the TITUS platform--><path d="M237.825,757.5133 C237.825,765.5283 237.825,774.2153 237.825,781.7333 " fill="none" id="**mvn gematik:pack-reports**\n creates a ZIP archive containing\n    all relevant data the TITUS platform needs\n    for the next steps in the certification process-to-The ZIP archive is uploaded manually\nto the TITUS platform" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="237.825,785.3173,240.625,779.0173,237.825,781.8173,235.025,779.0173,237.825,785.3173" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[3251790c8993fdc1a7e1025b736fc1ff]
+link The ZIP archive is uploaded manually\nto the TITUS platform to The next step in the\ncertification process can be triggered--><path d="M237.825,818.9803 C237.825,826.4703 237.825,835.4443 237.825,843.3263 " fill="none" id="The ZIP archive is uploaded manually\nto the TITUS platform-to-The next step in the\ncertification process can be triggered" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="237.825,846.8683,240.625,840.5683,237.825,843.3683,235.025,840.5683,237.825,846.8683" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[8fee3a5d2aab35a4042809114b09a563]
+link The next step in the\ncertification process can be triggered to end--><path d="M237.825,880.6713 C237.825,888.6303 237.825,897.9753 237.825,904.8773 " fill="none" id="The next step in the\ncertification process can be triggered-to-end" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="237.825,908.4333,240.625,902.1333,237.825,904.9333,235.025,902.1333,237.825,908.4333" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[f6d94921a58618aa56d7794f58d7537f]
+link #241071 to The local test report contains detailed failure logs--><path d="M335.965,615.8543 C347.935,622.2873 378.693,638.8143 400.645,650.6023 " fill="none" id="#241071-to-The local test report contains detailed failure logs" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="403.816,652.3103,399.5986,646.8565,400.735,650.6498,396.9418,651.7861,403.816,652.3103" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[85ff7c76182748b2a595f84164d698ae]
+link The local test report contains detailed failure logs to START--><path d="M430.731,652.3383 C440.398,633.2353 458.325,592.8873 458.325,556.4453 C458.325,478.7453 458.325,478.7453 458.325,478.7453 C458.325,445.8593 440.58,411.7833 426.293,389.6843 " fill="none" id="The local test report contains detailed failure logs-to-START" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><polygon fill="#90EE90" points="424.214,386.5133,425.3357,393.3156,426.1369,389.4378,430.0148,390.239,424.214,386.5133" style="stroke:#90EE90;stroke-width:1.3999999999999997;"/><!--MD5=[fb8453766d8884e5af1790e71a828d2b]
+@startuml
+
+!include plantuml.style
+
+title Tiger EAU Konnektorfarm process
+
+(*) - ->  Installation of openJDK11 and maven.
+
+- -> Cloning github repo https://github.com/gematik/tiger-eau-proxy.git\ninto a folder on the customers machine.
+
+- -> starting Tiger validation suite via\n**mvn -P Test **
+
+- -> Tiger test environment manager starts all\nTiger proxies (reverse, aggregating, local) will be started.
+
+- -> "The validation feature file\npart of the github repo will be started\n    waiting for the first request." as START
+
+- -> ===B1===
+
+    - -> The Primärsystem sends requests to the Konnektoren\n        via the local reverse Tiger proxies.\n        It follows either manually by human tester or\n        via test scripts the test work flow\n        as specified by Gematik.
+
+    - -> The test work flow has been completed or aborted
+
+- -> ===B2===
+
+===B1=== - -> The validation test suite checks\nthat all requests and responses,\nmatching the specified work flow\nhave been received in order\nand do match all criteria.
+
+- -> "**mvn serenity:aggregate serenity:reports**\ncreate a local test report"
+
+If "all steps successful?" then
+
+    - -> ===B2===
+
+    - -> "**mvn gematik:pack-reports**\n creates a ZIP archive containing\n    all relevant data the TITUS platform needs\n    for the next steps in the certification process"
+
+    - -> The ZIP archive is uploaded manually\nto the TITUS platform
+
+    - -> The next step in the\ncertification process can be triggered
+
+    - -> (*)
+else
+    - -> The local test report contains detailed failure logs
+    - -> START
+Endif
+@enduml
+
+@startuml
+
+<style>
+root {
+    Margin 30
+    BackgroundColor #fffff0
+    RoundCorner 20
+    FontColor #333
+    LineColor Gray
+    BorderColor Gray
+    HorizontalAlignment center
+    ImagePosition center
+}
+
+title {
+  FontSize 30
+  Margin 0
+  Padding 10 100
+  BackgroundColor White
+}
+
+arrow {
+    LineColor LightGreen
+    FontColor Green
+    LineThickness 2
+}
+
+.Package {
+    BackGroundColor White
+}
+
+.Rect {
+    LineColor Blue
+}
+
+.Tiger {
+    BackgroundColor LightGreen
+    FontColor Green
+    LineColor Green
+}
+
+.Other {
+    BackgroundColor LightSkyBlue
+    LineColor Blue
+}
+
+.NextRelease  {
+    BackgroundColor LightGray
+    FontColor Gray
+    LineColor Gray
+}
+
+interface {
+    FontColor DarkGreen
+}
+
+.HTTP {
+    LineColor Red
+    FontColor Red
+    LineThickness 2
+}
+
+.HTTP2 {
+    LineColor transparent
+}
+
+
+.Current {
+  BackgroundColor White
+  FontColor DarkRed
+}
+
+
+
+.File {
+    LineColor SlateBlue
+    BackgroundColor LightSkyBlue
+    FontColor SlateBlue
+}
+
+.Folder {
+    FontColor Gray
+    BackgroundColor White
+}
+</style>
+
+title Tiger EAU Konnektorfarm process
+
+(*) - ->  Installation of openJDK11 and maven.
+
+- -> Cloning github repo https://github.com/gematik/tiger-eau-proxy.git\ninto a folder on the customers machine.
+
+- -> starting Tiger validation suite via\n**mvn -P Test **
+
+- -> Tiger test environment manager starts all\nTiger proxies (reverse, aggregating, local) will be started.
+
+- -> "The validation feature file\npart of the github repo will be started\n    waiting for the first request." as START
+
+- -> ===B1===
+
+    - -> The Primärsystem sends requests to the Konnektoren\n        via the local reverse Tiger proxies.\n        It follows either manually by human tester or\n        via test scripts the test work flow\n        as specified by Gematik.
+
+    - -> The test work flow has been completed or aborted
+
+- -> ===B2===
+
+===B1=== - -> The validation test suite checks\nthat all requests and responses,\nmatching the specified work flow\nhave been received in order\nand do match all criteria.
+
+- -> "**mvn serenity:aggregate serenity:reports**\ncreate a local test report"
+
+If "all steps successful?" then
+
+    - -> ===B2===
+
+    - -> "**mvn gematik:pack-reports**\n creates a ZIP archive containing\n    all relevant data the TITUS platform needs\n    for the next steps in the certification process"
+
+    - -> The ZIP archive is uploaded manually\nto the TITUS platform
+
+    - -> The next step in the\ncertification process can be triggered
+
+    - -> (*)
+else
+    - -> The local test report contains detailed failure logs
+    - -> START
+Endif
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 15:26:11 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

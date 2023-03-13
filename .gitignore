@@ -1,0 +1,10 @@
+/.idea/
+/Cheatsheet.md
+/target/
+/tigerproxy/
+tiger.yaml
+
+jenkinsfiles
+Jenkinsfile
+Release.Jenkinsfile
+
