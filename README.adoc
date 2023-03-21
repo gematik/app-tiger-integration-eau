@@ -18,6 +18,7 @@ Um einen bestimmten Konnektor anzusprechen, müssen Sie folgende ZugriffsURL auf
 * Konnektor 3 RISE (kon**28**.e2e-test.gematik.solutions) erreichbar über *http*://127.0.0.1:11**3**10
 * Konnektor 4 Secunet (kon**29**.e2e-test.gematik.solutions) erreichbar über *http*://127.0.0.1:11**4**10
 * Konnektor 5 Secunet (kon**31**.e2e-test.gematik.solutions) erreichbar über *http*://127.0.0.1:11**5**10
+* Konnektor 6 Koco (kon**32**.e2e-test.gematik.solutions) erreichbar über *http*://127.0.0.1:11**6**10
 
 === Netzwerkdiagramme
 
@@ -90,7 +91,7 @@ das Maven Executable in Ihrem Ausführungspfad gefunden wird.
 
 [source,shell]
 ----
-cd tiger-integration-eau
+cd app-tiger-integration-eau
 mvn -P Demo
 ----
 
@@ -101,11 +102,11 @@ die mitprotokollierten Nachrichten werden im Verzeichnis _target/rbellogs_ als H
 
 [source,shell]
 ----
-cd tiger-integration-eau
+cd app-tiger-integration-eau
 mvn -P Kon1
 ----
 
-Sie können durch Verwendung von ```Kon1``` bis ```Kon5``` hier nur den Teil der Testsuite ausführen, welcher das Signieren des jeweiligen Konnektors mit der Verifikation durch alle anderen Konnektoren überprüft.
+Sie können durch Verwendung von ```Kon1``` bis ```Kon6``` hier nur den Teil der Testsuite ausführen, welcher das Signieren des jeweiligen Konnektors mit der Verifikation durch alle anderen Konnektoren überprüft.
 
 == Starten der Validierungstestsuite
 
@@ -114,7 +115,7 @@ können Sie den eigentlichen Validierungstestlauf durch folgenden Aufruf starten
 
 [source,shell]
 ----
-cd tiger-integration-eau
+cd app-tiger-integration-eau
 mvn -P Test
 ----
 
