@@ -1,0 +1,274 @@
+ports:
+  kon24: 11110
+  kon26: 11210
+  kon28: 11310
+  kon29: 11410
+  kon31: 11510
+  kon32: 11610
+  admin:
+    kon24: 11100
+    kon26: 11200
+    kon28: 11300
+    kon29: 11400
+    kon31: 11500
+    kon32: 11600
+connUrls:
+  kon1: https://kon24.e2e-test.gematik.solutions
+  kon2: https://kon26.e2e-test.gematik.solutions
+  kon3: https://kon28.e2e-test.gematik.solutions
+  kon4: https://kon29.e2e-test.gematik.solutions
+  kon5: https://kon31.e2e-test.gematik.solutions
+  kon6: https://kon32.e2e-test.gematik.solutions
+
+loglevel: "WARN"
+
+lib:
+  activateWorkflowUi: true
+
+servers:
+  kon1:
+    startupTimeoutSec: 10
+    source:
+    - ${tiger.connUrls.kon1}
+    healthcheckUrl: ${tiger.connUrls.kon1}
+    type: externalUrl
+  kon2:
+    startupTimeoutSec: 10
+    source:
+      - ${tiger.connUrls.kon2}
+    healthcheckUrl: ${tiger.connUrls.kon2}
+    type: externalUrl
+  kon3:
+    startupTimeoutSec: 10
+    source:
+      - ${tiger.connUrls.kon3}
+    healthcheckUrl: ${tiger.connUrls.kon3}
+    type: externalUrl
+  kon4:
+    startupTimeoutSec: 10
+    source:
+    - ${tiger.connUrls.kon4}
+    healthcheckUrl: ${tiger.connUrls.kon4}
+    type: externalUrl
+  kon5:
+    startupTimeoutSec: 10
+    source:
+      - ${tiger.connUrls.kon5}
+    healthcheckUrl: ${tiger.connUrls.kon5}
+    type: externalUrl
+  kon6:
+    startupTimeoutSec: 10
+    source:
+      - ${tiger.connUrls.kon6}
+    healthcheckUrl: ${tiger.connUrls.kon6}
+    type: externalUrl
+
+  proxykon1:
+    startupTimeoutSec: 60
+    tigerProxyCfg:
+      proxyLogLevel: ${tiger.loglevel}
+      proxyPort: ${tiger.ports.kon24}
+      rewriteHostHeader: true
+      forwardToProxy:
+        hostname: $SYSTEM
+      proxyRoutes:
+        - basicAuth:
+            password: ${gematik.password}
+            username: ${gematik.user}
+          from: /
+          to: ${tiger.connUrls.kon1}
+          id: route1
+      tls:
+        alternativeNames:
+          - 127.0.0.1
+          - localhost
+      modifications:
+        - condition: isResponse
+          regexFilter: http[s|]*\:\/\/kon\d{1,2}\.e2e\-test\.gematik\.solutions
+          name: replace hostname
+          targetElement: $.body
+          replaceWith: http://127.0.0.1:${tiger.ports.kon24}
+      adminPort: ${tiger.ports.admin.kon24}
+    dependsUpon: kon1
+    type: tigerProxy
+
+  proxykon2:
+    startupTimeoutSec: 60
+    tigerProxyCfg:
+      proxyLogLevel: ${tiger.loglevel}
+      proxyPort: ${tiger.ports.kon26}
+      rewriteHostHeader: true
+      forwardToProxy:
+        hostname: $SYSTEM
+      proxyRoutes:
+        - basicAuth:
+            password: ${gematik.password}
+            username: ${gematik.user}
+          from: /
+          to: ${tiger.connUrls.kon2}
+          id: route1
+      tls:
+        alternativeNames:
+          - 127.0.0.1
+          - localhost
+      modifications:
+        - condition: isResponse
+          regexFilter: http[s|]*\:\/\/kon\d{1,2}\.e2e\-test\.gematik\.solutions
+          name: replace hostname
+          targetElement: $.body
+          replaceWith: http://127.0.0.1:${tiger.ports.kon26}
+      adminPort: ${tiger.ports.admin.kon26}
+    dependsUpon: kon2
+    type: tigerProxy
+
+  proxykon3:
+    startupTimeoutSec: 60
+    tigerProxyCfg:
+      proxyLogLevel: ${tiger.loglevel}
+      proxyPort: ${tiger.ports.kon28}
+      rewriteHostHeader: true
+      forwardToProxy:
+        hostname: $SYSTEM
+      proxyRoutes:
+        - basicAuth:
+            password: ${gematik.password}
+            username: ${gematik.user}
+          from: /
+          to: ${tiger.connUrls.kon3}
+          id: route1
+      tls:
+        alternativeNames:
+          - 127.0.0.1
+          - localhost
+      modifications:
+        - condition: isResponse
+          regexFilter: http[s|]*\:\/\/kon\d{1,2}\.e2e\-test\.gematik\.solutions
+          name: replace hostname
+          targetElement: $.body
+          replaceWith: http://127.0.0.1:${tiger.ports.kon28}
+      adminPort: ${tiger.ports.admin.kon28}
+    dependsUpon: kon3
+    type: tigerProxy
+
+  proxykon4:
+    startupTimeoutSec: 60
+    tigerProxyCfg:
+      proxyLogLevel: ${tiger.loglevel}
+      proxyPort: ${tiger.ports.kon29}
+      rewriteHostHeader: true
+      forwardToProxy:
+        hostname: $SYSTEM
+      proxyRoutes:
+        - basicAuth:
+            password: ${gematik.password}
+            username: ${gematik.user}
+          from: /
+          to: ${tiger.connUrls.kon4}
+          id: route1
+      tls:
+        alternativeNames:
+          - 127.0.0.1
+          - localhost
+      modifications:
+        - condition: isResponse
+          regexFilter: http[s|]*\:\/\/kon\d{1,2}\.e2e\-test\.gematik\.solutions
+          name: replace hostname
+          targetElement: $.body
+          replaceWith: http://127.0.0.1:${tiger.ports.kon29}
+
+      adminPort: ${tiger.ports.admin.kon29}
+    dependsUpon: kon4
+    type: tigerProxy
+
+  proxykon5:
+    startupTimeoutSec: 60
+    tigerProxyCfg:
+      proxyLogLevel: ${tiger.loglevel}
+      proxyPort: ${tiger.ports.kon31}
+      rewriteHostHeader: true
+      forwardToProxy:
+        hostname: $SYSTEM
+      proxyRoutes:
+        - basicAuth:
+            password: ${gematik.password}
+            username: ${gematik.user}
+          from: /
+          to: ${tiger.connUrls.kon5}
+          id: route1
+      tls:
+        alternativeNames:
+          - 127.0.0.1
+          - localhost
+      modifications:
+        - condition: isResponse
+          regexFilter: http[s|]*\:\/\/kon\d{1,2}\.e2e\-test\.gematik\.solutions
+          name: replace hostname
+          targetElement: $.body
+          replaceWith: http://127.0.0.1:${tiger.ports.kon31}
+
+      adminPort: ${tiger.ports.admin.kon31}
+    dependsUpon: kon5
+    type: tigerProxy
+
+  proxykon6:
+    startupTimeoutSec: 60
+    tigerProxyCfg:
+      proxyLogLevel: ${tiger.loglevel}
+      proxyPort: ${tiger.ports.kon32}
+      rewriteHostHeader: true
+      forwardToProxy:
+        hostname: $SYSTEM
+      proxyRoutes:
+        - basicAuth:
+            password: ${gematik.password}
+            username: ${gematik.user}
+          from: /
+          to: ${tiger.connUrls.kon6}
+          id: route1
+      tls:
+        alternativeNames:
+          - 127.0.0.1
+          - localhost
+      modifications:
+        - condition: isResponse
+          regexFilter: http[s|]*\:\/\/kon\d{1,2}\.e2e\-test\.gematik\.solutions
+          name: replace hostname
+          targetElement: $.body
+          replaceWith: http://127.0.0.1:${tiger.ports.kon32}
+
+      adminPort: ${tiger.ports.admin.kon32}
+    dependsUpon: kon6
+    type: tigerProxy
+
+  collector:
+    active: false
+    startupTimeoutSec: 120
+    tigerProxyCfg:
+      proxyLogLevel: ${tiger.loglevel}
+      proxyPort: 11010
+      activateRbelEndpoint: true
+      trafficEndpoints:
+        - http://127.0.0.1:${tiger.ports.admin.kon24}
+        - http://127.0.0.1:${tiger.ports.admin.kon26}
+        - http://127.0.0.1:${tiger.ports.admin.kon28}
+        - http://127.0.0.1:${tiger.ports.admin.kon29}
+        - http://127.0.0.1:${tiger.ports.admin.kon31}
+        - http://127.0.0.1:${tiger.ports.admin.kon32}
+      tls:
+        alternativeNames:
+          - 127.0.0.1
+          - localhost
+      adminPort: 11000
+    dependsUpon: proxykon1,proxykon2,proxykon3,proxykon4,proxykon5,proxykon6
+    type: tigerProxy
+
+tigerProxy:
+  proxyLogLevel: ${tiger.loglevel}
+  skipTrafficEndpointsSubscription: true
+  trafficEndpoints:
+    - http://127.0.0.1:${tiger.ports.admin.kon24}
+    - http://127.0.0.1:${tiger.ports.admin.kon26}
+    - http://127.0.0.1:${tiger.ports.admin.kon28}
+    - http://127.0.0.1:${tiger.ports.admin.kon29}
+    - http://127.0.0.1:${tiger.ports.admin.kon31}
+    - http://127.0.0.1:${tiger.ports.admin.kon32}

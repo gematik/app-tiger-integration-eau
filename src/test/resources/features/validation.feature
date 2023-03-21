@@ -53,6 +53,7 @@ Funktionalität: Validiere Nachrichten zwischen Primärsystemen and Konnektoren
       | kon24            | kon28          | /service/v75/signservice | /webservices/signatureservice/v7.5 | KoCo Connector  | Research Industrial Systems Engineering (RISE) GmbH |
       | kon24            | kon29          | /service/v75/signservice | /ws/SignatureService               | KoCo Connector  | secunet Security Networks AG                        |
       | kon24            | kon31          | /service/v75/signservice | /ws/SignatureService               | KoCo Connector  | secunet Security Networks AG                        |
+      | kon24            | kon32          | /service/v75/signservice | /service/v75/signservice           | KoCo Connector  | KoCo Connector                        |
     @Test @Kon2
     Beispiele:
       | SignierKonnektor | PruefKonnektor | signsvcpath                        | verifysvcpath                      | SignierKonnName                                     | PruefKonnName                                       |
@@ -61,6 +62,7 @@ Funktionalität: Validiere Nachrichten zwischen Primärsystemen and Konnektoren
       | kon26            | kon28          | /webservices/signatureservice/v7.5 | /webservices/signatureservice/v7.5 | Research Industrial Systems Engineering (RISE) GmbH | Research Industrial Systems Engineering (RISE) GmbH |
       | kon26            | kon29          | /webservices/signatureservice/v7.5 | /ws/SignatureService               | Research Industrial Systems Engineering (RISE) GmbH | secunet Security Networks AG                        |
       | kon26            | kon31          | /webservices/signatureservice/v7.5 | /ws/SignatureService               | Research Industrial Systems Engineering (RISE) GmbH | secunet Security Networks AG                        |
+      | kon26            | kon32          | /webservices/signatureservice/v7.5 | /service/v75/signservice           | Research Industrial Systems Engineering (RISE) GmbH | KoCo Connector                        |
     @Test @Kon3
     Beispiele:
       | SignierKonnektor | PruefKonnektor | signsvcpath                        | verifysvcpath                      | SignierKonnName                                     | PruefKonnName                                       |
@@ -69,14 +71,16 @@ Funktionalität: Validiere Nachrichten zwischen Primärsystemen and Konnektoren
       | kon28            | kon28          | /webservices/signatureservice/v7.5 | /webservices/signatureservice/v7.5 | Research Industrial Systems Engineering (RISE) GmbH | Research Industrial Systems Engineering (RISE) GmbH |
       | kon28            | kon29          | /webservices/signatureservice/v7.5 | /ws/SignatureService               | Research Industrial Systems Engineering (RISE) GmbH | secunet Security Networks AG                        |
       | kon28            | kon31          | /webservices/signatureservice/v7.5 | /ws/SignatureService               | Research Industrial Systems Engineering (RISE) GmbH | secunet Security Networks AG                        |
+      | kon28            | kon32          | /webservices/signatureservice/v7.5 | /service/v75/signservice           | Research Industrial Systems Engineering (RISE) GmbH | KoCo Connector                        |
     @Test @Kon4
     Beispiele:
-      | SignierKonnektor | PruefKonnektor | signsvcpath                        | verifysvcpath                      | SignierKonnName              | PruefKonnName                                       |
+      | SignierKonnektor | PruefKonnektor | signsvcpath          | verifysvcpath                      | SignierKonnName              | PruefKonnName                                       |
       | kon29            | kon24          | /ws/SignatureService | /service/v75/signservice           | secunet Security Networks AG | KoCo Connector                                      |
       | kon29            | kon26          | /ws/SignatureService | /webservices/signatureservice/v7.5 | secunet Security Networks AG | Research Industrial Systems Engineering (RISE) GmbH |
       | kon29            | kon28          | /ws/SignatureService | /webservices/signatureservice/v7.5 | secunet Security Networks AG | Research Industrial Systems Engineering (RISE) GmbH |
       | kon29            | kon29          | /ws/SignatureService | /ws/SignatureService               | secunet Security Networks AG | secunet Security Networks AG                        |
       | kon29            | kon31          | /ws/SignatureService | /ws/SignatureService               | secunet Security Networks AG | secunet Security Networks AG                        |
+      | kon29            | kon32          | /ws/SignatureService | /service/v75/signservice           | secunet Security Networks AG | KoCo Connector                                      |
     @Test @Kon5
     Beispiele:
       | SignierKonnektor | PruefKonnektor | signsvcpath          | verifysvcpath                      | SignierKonnName              | PruefKonnName                                       |
@@ -85,14 +89,16 @@ Funktionalität: Validiere Nachrichten zwischen Primärsystemen and Konnektoren
       | kon31            | kon28          | /ws/SignatureService | /webservices/signatureservice/v7.5 | secunet Security Networks AG | Research Industrial Systems Engineering (RISE) GmbH |
       | kon31            | kon29          | /ws/SignatureService | /ws/SignatureService               | secunet Security Networks AG | secunet Security Networks AG                        |
       | kon31            | kon31          | /ws/SignatureService | /ws/SignatureService               | secunet Security Networks AG | secunet Security Networks AG                        |
+      | kon31            | kon32          | /ws/SignatureService | /service/v75/signservice           | secunet Security Networks AG | KoCo Connector                        |
     @Kon6
     Beispiele:
       | SignierKonnektor | PruefKonnektor | signsvcpath          | verifysvcpath                      | SignierKonnName              | PruefKonnName                                       |
-      | konXX            | kon24          | /ws/SignatureService | /service/signservice               | secunet Security Networks AG | KoCo Connector                                      |
-      | konXX            | kon26          | /ws/SignatureService | /webservices/signatureservice/v7.5 | secunet Security Networks AG | Research Industrial Systems Engineering (RISE) GmbH |
-      | konXX            | kon28          | /ws/SignatureService | /webservices/signatureservice/v7.5 | secunet Security Networks AG | Research Industrial Systems Engineering (RISE) GmbH |
-      | konXX            | kon29          | /ws/SignatureService | /ws/SignatureService               | secunet Security Networks AG | secunet Security Networks AG                        |
-      | konXX            | kon31          | /ws/SignatureService | /ws/SignatureService               | secunet Security Networks AG | secunet Security Networks AG                        |
+      | kon32            | kon24          | /service/v75/signservice | /service/signservice               | KoCo Connector | KoCo Connector                                      |
+      | kon32            | kon26          | /service/v75/signservice | /webservices/signatureservice/v7.5 | KoCo Connector | Research Industrial Systems Engineering (RISE) GmbH |
+      | kon32            | kon28          | /service/v75/signservice | /webservices/signatureservice/v7.5 | KoCo Connector | Research Industrial Systems Engineering (RISE) GmbH |
+      | kon32            | kon29          | /service/v75/signservice | /ws/SignatureService               | KoCo Connector | secunet Security Networks AG                        |
+      | kon32            | kon31          | /service/v75/signservice | /ws/SignatureService               | KoCo Connector | secunet Security Networks AG                        |
+      | kon32            | kon32          | /service/v75/signservice | /ws/SignatureService               | KoCo Connector | KoCo Connector                        |
 
 
   @IntegrationsTest

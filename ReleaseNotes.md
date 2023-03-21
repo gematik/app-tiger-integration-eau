@@ -1,5 +1,10 @@
 # Release tiger-integration-eau
 
+## Release 1.0.7
+
+- added missing tiger.yaml template file
+- added Konnektor32
+
 ## Release 1.0.1 
 
 ### added
