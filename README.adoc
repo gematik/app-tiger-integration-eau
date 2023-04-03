@@ -120,7 +120,7 @@ mvn -P Test
 ----
 
 Nun startet die Validierungstestsuite die Testumgebung und im Anschluss dann den Webbrowser Ihres Rechners.
-Auf der dargestellten Webseite werden sie nun durch den Validierungsprozess geführt.
+Auf der dargestellten Webseite, der Tiger Worklow UI werden sie nun durch den Validierungsprozess geführt.
 
 image::imgs/Tiger Log ReadyForStart.png[title="Console log"]
 
@@ -169,15 +169,12 @@ mvn serenity:aggregate serenity:reports
 
 == Graphische Oberfläche
 
-Um die Nachrichten der Validierungstestsuite in Echtzeit zu sehen und Fehler schnell erkennen zu können,
-ist eine Weboberfläche unter folgender URL erreichbar:
+Um die Nachrichten der Validierungstestsuite in Echtzeit zu sehen und Fehler schnell erkennen zu können, besitzt die Workflow UI auf der rechten Seite eine Rbel Log Details Pane.
+Diese kann durch einen Klick auf das Icon rechts oben geöffnet werden.
 
-[source,http request]
-----
-http://127.0.0.1:11000/webui
-----
+image:imgs/TigerOpenRbelDetailsPane.png[title="Open Rbel Log Details Pane"]
 
-Die Nachrichten werden im RbelLog Format, identisch zu den Testevidenz-Dateien dargestellt.
+Die Nachrichten werden in dieser Ansicht im RbelLog Format, identisch zu den Testevidenz-Dateien dargestellt.
 
 === Menüleiste (Unten)
 
