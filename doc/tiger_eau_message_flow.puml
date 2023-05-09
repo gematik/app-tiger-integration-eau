@@ -1,0 +1,80 @@
+@startuml
+
+
+skinparam useBetaStyle true
+skinparam sequenceMessageAlign direction
+<style>
+    margin 50
+  }
+  title {
+    margin 20
+  }
+  sequenceDiagram {
+    .ts {
+      FontColor green
+      LineColor green
+    }
+    .req {
+        FontColor slateblue
+        LineColor slateblue
+    }
+    .res {
+        FontColor darkred
+        LineColor darkred
+    }
+    participant {
+        BackgroundColor lightgreen
+        FontColor green
+    }
+    actor {
+        BackgroundColor slateblue
+        FontColor darkslateblue
+    }
+    queue {
+        BackgroundColor darkred
+        FontColor white
+    }
+  }
+</style>
+
+skinparam SequenceGroup {
+  BorderColor lightgray
+  FontColor gray
+  HeaderFontColor gray
+}
+
+title: EAU Nachrichtenfluß
+
+actor Primärsystem as ps order 10
+participant EAUTestsuite as ts order 20
+queue Konnektor as kon order 30
+
+loop Iteration über alle Konnektoren X = kon24,26,28,29,30,31
+    group Signiervorgang mit Konnektor X
+    ps ->(10) kon <<req>> : GET <signierkonnektor>/connector.sds
+    kon -->(10) ps <<res>> : Liste aller Service Endpunkte
+    ts --> ts <<ts>> : warte auf Nachricht und prüfe ProductVendorName
+
+    ps ->(10) kon <<req>> : POST <signierkonnektor>/<signservicepath> mit \nEnvelope.Body.GetJobNumber
+    kon -->(10) ps <<res>> : XML Antwort mit einer Job Nummer
+    ts --> ts <<ts>> : Speichere Job Nummer
+
+    ps ->(10) kon <<req>> : POST <signierkonnektor>/<signservicepath> mit korrekter \nEnvelope.Body.SignDocument.JobNumber
+    kon -->(10) ps <<res>> : XML Antwort mit dem\nsignierten Base64 enkodierten Dokument
+    ts --> ts <<ts>> : Prüfe Envelope.Body.SignDocumentResponse.\nSignResponse.Status.Result ist "OK"
+    ts --> ts <<ts>> : Speichere Envelope.Body.SignDocumentResponse.\nSignResponse.SignatureObject.Base64Signature
+    end
+
+    loop Iteration über alle Konnektoren Y> = kon24,26,28,29,30,31
+        group Prüfvorgang mit Konnektor Y
+            ps ->(10) kon <<req>> : GET <prüfkonnektor>/connector.sds
+            kon -->(10) ps <<res>> : Liste aller Service Endpunkte
+            ts --> ts <<ts>> : warte auf Nachricht und prüfe ProductVendorName
+            ps ->(10) kon <<req>> : POST <prüfkonnektor>/<verifysvcpath> mit korrektem \nEnvelope.Body.VerifyDocument.\nSignatureObject.Base64Signature
+            kon -->(10) ps <<res>> : XML Antwort mit dem\nErgebnis der Verifikation
+            ts --> ts <<ts>> : Envelope.Body.VerifyDocumentResponse.\nStatus.Result ist "OK"
+            ts --> ts <<ts>> : Envelope.Body.VerifyDocumentResponse.\nVerificationResult.HighLevelResult ist "VALID"
+        end
+    end
+end
+@enduml
