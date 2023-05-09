@@ -128,6 +128,9 @@ Anbei noch der gesamte Workflow im Überblick
 
 image::imgs/tiger-integration-eau-process.svg[title="Tiger EAU Prozess"]
 
+Und der Nachrichtenfluss im Detail
+
+image::doc/tiger_eau_message_flow-EAU_Nachrichtenfluß.svg[title="Tiger EAU Nachrichtenfluß"]
 
 == Testbericht
 
